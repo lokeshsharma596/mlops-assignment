@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## 1. Data + EDA  (Task 1)
 ```bash
-python scripts/download_data.py      # -> data/raw/heart_disease_raw.csv
+c     # -> data/raw/heart_disease_raw.csv
 python -m src.data                   # -> data/processed/heart_disease_clean.csv
 python -m src.eda                    # -> reports/figures/*.png
 ```
@@ -40,7 +40,7 @@ pytest -v
 ```bash
 docker build -t heart-api:latest .
 docker run -p 8000:8000 -d heart-api:latest
-curl -X POST localhost:8000/predict -H "Content-Type: application/json" -d '{"age":63,"sex":1,"cp":1,"trestbps":145,"chol":233,"fbs":1,"restecg":2,"thalach":150,"exang":0,"oldpeak":2.3,"slope":3,"ca":0,"thal":6}'
+c
 ```
 Swagger UI: http://localhost:8000/docs
 
