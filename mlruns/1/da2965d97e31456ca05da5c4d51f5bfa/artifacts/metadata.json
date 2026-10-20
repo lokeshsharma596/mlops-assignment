@@ -1,0 +1,25 @@
+{
+  "model_name": "logistic_regression",
+  "selection_metric": "cv_roc_auc",
+  "metrics": {
+    "cv_accuracy": 0.8304421768707483,
+    "cv_precision": 0.8232210012210011,
+    "cv_recall": 0.8098814229249012,
+    "cv_f1": 0.8131749958766287,
+    "cv_roc_auc": 0.9027904462687071,
+    "test_accuracy": 0.8852459016393442,
+    "test_precision": 0.8387096774193549,
+    "test_recall": 0.9285714285714286,
+    "test_f1": 0.8813559322033898,
+    "test_roc_auc": 0.9653679653679654,
+    "run_id": "afd8014a74c5455f8b6cae22bb6eb4e4"
+  },
+  "params": {
+    "clf__C": 0.1,
+    "clf__class_weight": "balanced",
+    "clf__penalty": "l2"
+  },
+  "trained_at": "2026-10-20T08:46:40.464759+00:00",
+  "sklearn_version": "1.5.2",
+  "python_version": "3.11.17"
+}
