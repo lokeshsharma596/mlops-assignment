@@ -5,7 +5,7 @@ import time
 import urllib.request
 import json
 
-URL = "http://localhost:8000/predict"
+URL = "http://localhost:8001/predict"
 for i in range(200):
     body = {"age": random.randint(35, 75), "sex": random.randint(0, 1),
             "cp": random.randint(1, 4), "trestbps": random.randint(100, 180),

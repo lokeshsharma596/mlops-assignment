@@ -12,14 +12,14 @@
     "test_recall": 0.9285714285714286,
     "test_f1": 0.8813559322033898,
     "test_roc_auc": 0.9653679653679654,
-    "run_id": "afd8014a74c5455f8b6cae22bb6eb4e4"
+    "run_id": "96ea0af9888b48d6939e1c4fa76bfb2c"
   },
   "params": {
     "clf__C": 0.1,
     "clf__class_weight": "balanced",
     "clf__penalty": "l2"
   },
-  "trained_at": "2026-10-20T08:46:40.464759+00:00",
+  "trained_at": "2026-10-20T12:23:29.735369+00:00",
   "sklearn_version": "1.5.2",
-  "python_version": "3.11.17"
+  "python_version": "3.9.21"
 }

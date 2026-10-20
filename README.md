@@ -3,9 +3,16 @@
 Pipeline: UCI data -> EDA -> sklearn pipelines -> MLflow tracking -> packaged model -> FastAPI -> Docker -> Kubernetes -> Prometheus/Grafana, with GitHub Actions CI.
 
 ## 0. Setup
-```bash
-python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
+```
+bash/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install python@3.11 git kubectl minikube
+brew install docker
+
+python3.11 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
 pip install -r requirements.txt
+
 ```
 
 ## 1. Data + EDA  (Task 1)
