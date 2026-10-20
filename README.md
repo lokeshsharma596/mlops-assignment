@@ -35,12 +35,11 @@ Outputs: `models/model.joblib` (full preprocessing + model pipeline), `models/me
 flake8 src app tests scripts
 pytest -v
 ```
-`.github/workflows/ci.yml`: lint -> test -> train (uploads model, MLflow DB, figures) -> docker build + smoke test. Any failure stops the pipeline.
 
 ## 6. Docker  (Task 6)
 ```bash
 docker build -t heart-api:latest .
-docker run -p 8000:8000 heart-api:latest
+docker run -p 8000:8000 -d heart-api:latest
 curl -X POST localhost:8000/predict -H "Content-Type: application/json" -d '{"age":63,"sex":1,"cp":1,"trestbps":145,"chol":233,"fbs":1,"restecg":2,"thalach":150,"exang":0,"oldpeak":2.3,"slope":3,"ca":0,"thal":6}'
 ```
 Swagger UI: http://localhost:8000/docs
@@ -60,7 +59,3 @@ Optional ingress: `minikube addons enable ingress && kubectl apply -f k8s/ingres
 docker compose up --build            # API :8000, Prometheus :9090, Grafana :3000 (admin/admin)
 python scripts/send_traffic.py       # generate load
 ```
-Request logs go to stdout and `logs/api.log`. Metrics at `/metrics`; panel queries in `monitoring/grafana_queries.md`.
-
-## Screenshots to capture for the report
-MLflow runs table + comparison, pytest output, GitHub Actions green run, `docker run` + curl, `kubectl get pods,svc`, Prometheus targets, Grafana dashboard.
